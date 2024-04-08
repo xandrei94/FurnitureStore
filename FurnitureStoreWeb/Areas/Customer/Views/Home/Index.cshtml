@@ -1,0 +1,93 @@
+﻿@model List<Product>
+@{
+    decimal discountPercentage = ViewBag.CustomerDiscount ?? 0m;
+}
+
+<head>
+    <script src="~/js/incrementQuantity.js"></script>
+</head>
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">
+                Product List
+            </h2>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    List Price
+                </th>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <th>
+                        Price
+                    </th>
+                }
+
+                <th>
+                    Stock
+                </th>
+                <th colspan="2">
+                    Purchase zone
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.OrderBy(x => x.Id))
+            {
+                <tr>
+                    <td>@obj.Name</td>
+                    <td>@obj.Description</td>
+                    <td>@obj.ListPrice</td>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        decimal listPriceDecimal = (decimal)obj.ListPrice;
+                        decimal discountedPrice = listPriceDecimal - (listPriceDecimal * (discountPercentage / 100));
+                        <td>@discountedPrice</td>
+                    }
+                    <td>@obj.Stock</td>
+
+                    <td>
+                        <form method="post" action="/Customer/Home/AddToCart" class="d-flex align-items-center">
+                            <input type="hidden" name="id" value="@obj.Id" />
+
+                            <div class="input-group mr-2">
+                                <input type="number" class="form-control" name="quantity" id="quantityInput_@obj.Id" value="0" min="0" style="width: 20px;">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary quantity-btn" type="button" data-operation="increment" data-id="@obj.Id">+</button>
+                                    <button class="btn btn-primary quantity-btn" type="button" data-operation="decrement" data-id="@obj.Id">-</button>
+                                </div>
+                            </div>
+                            <div class="btn btn-sm ml-5">
+                                <button type="submit" class="btn btn-primary" style="width: 125px;">
+                                    <i class="bi bi-cart-plus"></i> Add to cart
+                                </button>
+                            </div>
+                        </form>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col-6 col-md-3">
+            <a asp-area="Customer" asp-controller="Home" asp-action="ViewCart" class="btn btn-outline-secondary border form-control" style="background-color: green; color: white; border-color: green;">
+                <i class="bi bi-cart-check-fill">View Cart</i>
+            </a>
+        </div>
+    </div>
+
+</div>

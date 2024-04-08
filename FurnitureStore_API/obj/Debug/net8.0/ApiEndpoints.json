@@ -1,0 +1,277 @@
+[
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.CartFlowAPIController",
+    "Method": "AddToCart",
+    "RelativePath": "api/CartFlowAPI/AddToCart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartDTO",
+        "Type": "FurnitureStore.Models.ViewModels.CartInfoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.CartFlowAPIController",
+    "Method": "Checkout",
+    "RelativePath": "api/CartFlowAPI/Checkout",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartDTO",
+        "Type": "FurnitureStore.Models.ViewModels.CartInfoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.CartFlowAPIController",
+    "Method": "GetProducts",
+    "RelativePath": "api/CartFlowAPI/GetProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.CartFlowAPIController",
+    "Method": "RemoveFromCart",
+    "RelativePath": "api/CartFlowAPI/RemoveFromCart",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartDTO",
+        "Type": "FurnitureStore.Models.ViewModels.CartInfoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.CartFlowAPIController",
+    "Method": "ViewCart",
+    "RelativePath": "api/CartFlowAPI/ViewCart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartDTO",
+        "Type": "FurnitureStore.Models.ViewModels.CartInfoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.CustomerAPIController",
+    "Method": "AddCustomer",
+    "RelativePath": "api/CustomerAPI/AddCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "FurnitureStore.Models.CustomerUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.CustomerAPIController",
+    "Method": "DeleteCustomer",
+    "RelativePath": "api/CustomerAPI/DeleteCustomer/{id}/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.CustomerAPIController",
+    "Method": "GetCustomers",
+    "RelativePath": "api/CustomerAPI/GetCustomers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FurnitureStore.Models.CustomerUser",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.CustomerAPIController",
+    "Method": "Get5Customers",
+    "RelativePath": "api/CustomerAPI/GetCustomersOnly5",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FurnitureStore.Models.CustomerUser",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.CustomerAPIController",
+    "Method": "UpdateCustomer",
+    "RelativePath": "api/CustomerAPI/UpdateCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "FurnitureStore.Models.CustomerUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.DiscountAPIController",
+    "Method": "GetCustomers",
+    "RelativePath": "api/DiscountAPI/GetDiscounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FurnitureStore.Models.Discount",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.ProductAPIController",
+    "Method": "GetProducts",
+    "RelativePath": "api/ProductAPI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FurnitureStore.Models.Product",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.ProductAPIController",
+    "Method": "AddProduct",
+    "RelativePath": "api/ProductAPI/AddProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "FurnitureStore.Models.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.ProductAPIController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/ProductAPI/DeleteProduct/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.ProductAPIController",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/ProductAPI/UpdateProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "FurnitureStore.Models.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FurnitureStore_API.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FurnitureStore_API.WeatherForecast, FurnitureStore_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

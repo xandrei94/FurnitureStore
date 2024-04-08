@@ -1,0 +1,128 @@
+﻿@model Product
+
+<form method="post">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Product</h2>
+            <hr />
+        </div>
+        @* <div asp-validation-summary="ModelOnly"></div> *@
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Name" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Category" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="Category" class="form-control" />
+                            <span asp-validation-for="Category" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="ProductCode" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="ProductCode" class="form-control" />
+                            <span asp-validation-for="ProductCode" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Description" class="p-0"></label>
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Supplier" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="Supplier" class="form-control" />
+                            <span asp-validation-for="Supplier" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Manufacturer" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="Manufacturer" class="form-control" />
+                            <span asp-validation-for="Manufacturer" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Stock" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="Stock" class="form-control" />
+                            <span asp-validation-for="Stock" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="ListPrice" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="ListPrice" class="form-control" />
+                            <span asp-validation-for="ListPrice" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Price" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="Price" class="form-control" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="col-md-3">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="IsAvailableForPurchase" class="p-0">
+                            <input asp-for="IsAvailableForPurchase" class="form-check-input" />
+                            <span>Available for purchase</span>
+                        </label>
+                        <span asp-validation-for="IsAvailableForPurchase" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Update</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                    Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+</form>

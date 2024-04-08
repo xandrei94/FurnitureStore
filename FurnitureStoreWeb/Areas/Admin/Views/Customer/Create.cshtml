@@ -1,0 +1,127 @@
+﻿@model CustomerUser
+
+<form method="post">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Customer Details</h2>
+            <hr />
+        </div>
+        @* <div asp-validation-summary="ModelOnly"></div> *@
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Name" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="PhoneNumber" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="PhoneNumber" class="form-control" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Adress" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="Adress" class="form-control" />
+                            <span asp-validation-for="Adress" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="City" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="City" class="form-control" />
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Country" class="col-form-label p-0"></label>
+                        <div class="col">
+                            <input asp-for="Country" class="form-control" />
+                            <span asp-validation-for="Country" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="@Model.Discount.Id" class="col-form-label p-0">Discount Type</label>
+                        <div class="col">
+                            <select id="discountSelect" asp-for="DiscountId" class="form-control">
+                                @foreach (var item in ViewBag.DiscountList)
+                                {
+                                    <option value="@item.Value">@item.Text</option>
+                                }
+                            </select>
+                            <span asp-validation-for="@Model.Discount.Id" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3 row p-1">
+                        <label asp-for="@Model.Discount.Percentage" class="col-form-label p-0">Percentage</label>
+                        <div class="col">
+                            <input id="percentageInput" asp-for="@Model.Discount.Percentage" class="form-control" disabled />
+                            <span asp-validation-for="@Model.Discount.Percentage" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Update</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Customer" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                    Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    const discountSelect = document.getElementById('discountSelect');
+    const percentageInput = document.getElementById('percentageInput');
+
+    const discountDetails = {
+        1: { Name: 'Standard', Percentage: 0 },
+        2: { Name: 'Bronze', Percentage: 5 },
+        3: { Name: 'Silver', Percentage: 10 },
+        4: { Name: 'Gold', Percentage: 15 }
+    };
+
+    function updateDiscountDetails() {
+        const selectedDiscountId = discountSelect.value;
+        const selectedDiscount = discountDetails[selectedDiscountId];
+        if (selectedDiscount) {
+            percentageInput.value = selectedDiscount.Percentage + '%';
+        }
+    }
+
+    discountSelect.addEventListener('change', updateDiscountDetails);
+
+    updateDiscountDetails();
+</script>

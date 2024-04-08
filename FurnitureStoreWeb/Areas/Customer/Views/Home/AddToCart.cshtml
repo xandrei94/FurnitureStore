@@ -1,0 +1,89 @@
+﻿@model List<CartItem>
+@{
+    double totalSum = 0;
+}
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Shopping Cart - Checkout Area</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body p-4">
+        <div class="row pb-3">
+            @* <div class="col-12">
+            <a asp-area="Admin" asp-controller="Customer" asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Create New Customer
+            </a>
+            </div> *@
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Product
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Total Price
+                </th>
+                <th>
+                    Manage Area
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td>@obj.Product.Name</td>
+                    <td>@obj.Quantity </td>
+                    <td>@obj.Price</td>
+                    <td>@string.Format("{0:0.00}", obj.TotalPrice)</td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a class="deleteButton btn btn-danger mx-2" asp-area="Customer" asp-controller="Home" asp-action="RemoveFromCart" asp-route-id="@obj.Id">
+                                <i class="bi bi-trash-fill"></i> remove
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                totalSum += obj.TotalPrice;
+            }
+            <tr>
+                <td colspan="2"></td>
+                <td>Total:</td>
+                <td>@totalSum</td>
+            </tr>
+        </tbody>
+    </table>
+
+   
+</div>
+
+<div class="row">
+    <div class="row">
+        <div class="col-6 col-md-3">
+            @* <button type="submit" class="btn btn-primary form-control">CHECK OUT</button> *@
+            <a asp-area="Customer" asp-controller="Home" asp-action="CheckOut" class="btn btn-primary form-control">
+                Checkout
+            </a>
+        </div>
+        <div class="col-6 col-md-3">
+            <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                Back to List
+            </a>
+        </div>
+    </div>
+</div>

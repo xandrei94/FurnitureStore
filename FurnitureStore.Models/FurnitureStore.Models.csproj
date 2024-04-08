@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net8.0\FurnitureStore.Models.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net8.0\FurnitureStore.Models.GlobalUsings.g.cs" />
+    <Compile Include="obj\Release\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\net8.0\FurnitureStore.Models.AssemblyInfo.cs" />
+    <Compile Include="obj\Release\net8.0\FurnitureStore.Models.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net8.0\FurnitureStore.Models.deps.json" />
+    <Content Include="bin\Release\net8.0\FurnitureStore.Models.deps.json" />
+    <Content Include="obj\Debug\net8.0\FurnitureStore.Models.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\FurnitureStore.Models.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\Release\net8.0\FurnitureStore.Models.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net8.0\FurnitureStore.Models.dll" />
+    <None Include="bin\Debug\net8.0\FurnitureStore.Models.pdb" />
+    <None Include="bin\Release\net8.0\FurnitureStore.Models.dll" />
+    <None Include="bin\Release\net8.0\FurnitureStore.Models.pdb" />
+    <None Include="obj\Debug\net8.0\FurnitureStore.Models.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net8.0\FurnitureStore.Models.assets.cache" />
+    <None Include="obj\Debug\net8.0\FurnitureStore.Models.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net8.0\FurnitureStore.Models.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net8.0\FurnitureStore.Models.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net8.0\FurnitureStore.Models.dll" />
+    <None Include="obj\Debug\net8.0\FurnitureStore.Models.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net8.0\FurnitureStore.Models.pdb" />
+    <None Include="obj\Debug\net8.0\refint\FurnitureStore.Models.dll" />
+    <None Include="obj\Debug\net8.0\ref\FurnitureStore.Models.dll" />
+    <None Include="obj\FurnitureStore.Models.csproj.nuget.g.props" />
+    <None Include="obj\FurnitureStore.Models.csproj.nuget.g.targets" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\Release\net8.0\FurnitureStore.Models.AssemblyInfoInputs.cache" />
+    <None Include="obj\Release\net8.0\FurnitureStore.Models.assets.cache" />
+    <None Include="obj\Release\net8.0\FurnitureStore.Models.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\net8.0\FurnitureStore.Models.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\net8.0\FurnitureStore.Models.dll" />
+    <None Include="obj\Release\net8.0\FurnitureStore.Models.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Release\net8.0\FurnitureStore.Models.pdb" />
+    <None Include="obj\Release\net8.0\refint\FurnitureStore.Models.dll" />
+    <None Include="obj\Release\net8.0\ref\FurnitureStore.Models.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.3" />
+  </ItemGroup>
+
+</Project>

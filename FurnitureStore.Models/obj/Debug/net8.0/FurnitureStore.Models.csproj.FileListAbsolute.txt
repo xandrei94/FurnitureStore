@@ -1,0 +1,12 @@
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\bin\Debug\net8.0\FurnitureStore.Models.deps.json
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\bin\Debug\net8.0\FurnitureStore.Models.dll
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\bin\Debug\net8.0\FurnitureStore.Models.pdb
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\obj\Debug\net8.0\FurnitureStore.Models.csproj.AssemblyReference.cache
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\obj\Debug\net8.0\FurnitureStore.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\obj\Debug\net8.0\FurnitureStore.Models.AssemblyInfoInputs.cache
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\obj\Debug\net8.0\FurnitureStore.Models.AssemblyInfo.cs
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\obj\Debug\net8.0\FurnitureStore.Models.csproj.CoreCompileInputs.cache
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\obj\Debug\net8.0\FurnitureStore.Models.dll
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\obj\Debug\net8.0\refint\FurnitureStore.Models.dll
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\obj\Debug\net8.0\FurnitureStore.Models.pdb
+C:\Users\Andrei\source\repos\FurnitureStore\FurnitureStore.Models\obj\Debug\net8.0\ref\FurnitureStore.Models.dll
